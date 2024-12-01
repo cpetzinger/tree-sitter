@@ -3763,7 +3763,7 @@ pub fn format_sexp(sexp: &str, initial_indent_level: usize) -> String {
 }
 
 pub fn wasm_stdlib_symbols() -> impl Iterator<Item = &'static str> {
-    const WASM_STDLIB_SYMBOLS: &str = include_str!(concat!(env!("OUT_DIR"), "/stdlib-symbols.txt"));
+    const WASM_STDLIB_SYMBOLS: &str = "";
 
     WASM_STDLIB_SYMBOLS
         .lines()

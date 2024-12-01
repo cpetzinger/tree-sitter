@@ -18,6 +18,8 @@ node_modules
 docs/assets/js/tree-sitter.js
 
 /tree-sitter.pc
+/bazel-*
+/MODULE.bazel.lock
 
 /target
 *.rs.bk

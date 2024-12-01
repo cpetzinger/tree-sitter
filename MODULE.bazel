@@ -1,0 +1,24 @@
+module(
+    name = "tree_sitter",
+    repo_name = "tree_sitter",
+)
+
+bazel_dep(name = "rules_rust", version = "0.49.3")
+
+crate = use_extension("@rules_rust//crate_universe:extension.bzl", "crate")
+crate.from_cargo(
+    name = "crates",
+    cargo_lockfile = "//:Cargo.lock",
+    manifests = [
+        "//:Cargo.toml",
+        "//:cli/Cargo.toml",
+        "//:cli/config/Cargo.toml",
+        "//:cli/loader/Cargo.toml",
+        "//:highlight/Cargo.toml",
+        "//:lib/Cargo.toml",
+        "//:lib/language/Cargo.toml",
+        "//:tags/Cargo.toml",
+        "//:xtask/Cargo.toml",
+    ],
+)
+use_repo(crate, "crates")
