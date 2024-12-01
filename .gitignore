@@ -6,6 +6,7 @@ log*.html
 .cache
 .zig-cache
 
+bazel-*
 profile*
 fuzz-results
 test/fuzz/out
